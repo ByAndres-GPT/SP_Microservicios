@@ -20,7 +20,7 @@ async function validarFormulario(evt) {
 
   //console.log(entrar.sala.ID_SALA);
   localStorage.setItem("SALA_ID", entrar.sala.ID_SALA);
-  location.replace("/registro-entradas-salidas-salas");
+  location.replace("/SP_Microservicios/Frontend/registro-entradas-salidas-salas.html");
 }
 
 async function buscarSala(ID_SALA) {
@@ -37,5 +37,5 @@ async function buscarSala(ID_SALA) {
 
 function cerrar() {
   localStorage.removeItem("SALA_ID");
-  location.replace("/loginSala");
+  location.replace("/loginSala.html");
 }

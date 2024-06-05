@@ -19,7 +19,7 @@ async function mostrarSalas() {
         sala.DESCRIPCION +
         '</div><div class="sala">Estado: ' +
         sala.ESTADO +
-        '</div><div class="botones separador"><div class="one-third"><form action="detalles-sala-admin"><input type="hidden" name="id-sala" value="' +
+        '</div><div class="botones separador"><div class="one-third"><form action="detalles-sala-admin.html"><input type="hidden" name="id-sala" value="' +
         sala.ID_SALA +
         '"><button type="submit" class="boton-detalles" >Detalles</button></form></div><div class="one-third"><a href="#modalEditar" onclick="cargarDatos(' +
         sala.ID_SALA +
