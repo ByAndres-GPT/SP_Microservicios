@@ -2,7 +2,7 @@ let idEdit = null;
 //Mostrar las salas
 async function mostrarSalas() {
   try {
-    const response = await fetch(`${url}/salas/all`);
+    const response = await fetch(`${url3}/salas/all`);
     if (!response.ok) {
       throw new Error("No se pudo obtener la lista de paquetes");
     }
@@ -64,7 +64,7 @@ async function crear(NOMBRE, DESCRIPCION) {
   try {
     const body = { NOMBRE, DESCRIPCION };
 
-    const res = await fetch(`${url}/salas/crear`, {
+    const res = await fetch(`${url3}/salas/crear`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -95,7 +95,7 @@ const inputEditEstado = document.querySelector("#edit-estado");
 async function cargarDatos(id) {
   idEdit = id;
   try {
-    const response = await fetch(`${url}/salas/sala/${id}`);
+    const response = await fetch(`${url3}/salas/sala/${id}`);
     if (!response.ok) {
       throw new Error("No se pudieron obtener los datos del usuario");
     }
@@ -143,7 +143,7 @@ async function editar(ID_SALA, NOMBRE, DESCRIPCION, ESTADO) {
   try {
     const body = { ID_SALA, NOMBRE, DESCRIPCION, ESTADO }; // Elimina el ID_SALA del cuerpo
 
-    const res = await fetch(`${url}/salas/actualizar/${ID_SALA}`, {
+    const res = await fetch(`${url3}/salas/actualizar/${ID_SALA}`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -166,7 +166,7 @@ async function editar(ID_SALA, NOMBRE, DESCRIPCION, ESTADO) {
 //Para eliminar una sala
 async function eliminar(id) {
   try {
-    const res = await fetch(`${url}/salas/eliminar/${id}`, {
+    const res = await fetch(`${url3}/salas/eliminar/${id}`, {
       method: "DELETE",
     });    
 
