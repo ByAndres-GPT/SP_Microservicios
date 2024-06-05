@@ -3,7 +3,7 @@ const alertMessage = document.querySelector("#alert");
 //Mostrar las salas
 async function mostrarSalas() {
   try {
-    const response = await fetch(`${url}/salas/all`);
+    const response = await fetch(`${url3}/salas/all`);
     if (!response.ok) {
       throw new Error("No se pudo obtener la lista de paquetes");
     }
@@ -37,7 +37,7 @@ const inputIdSala2 = document.querySelector("#idSala2");
 async function mostrarDatos(id) {
   idEdit = id;
   try {
-    const response = await fetch(`${url}/salas/sala/${id}`);
+    const response = await fetch(`${url3}/salas/sala/${id}`);
     if (!response.ok) {
       throw new Error("No se pudieron obtener los datos del usuario");
     }
