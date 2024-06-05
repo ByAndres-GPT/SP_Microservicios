@@ -36,7 +36,7 @@ async function verificarLogin() {
 verificarLogin();
 
 async function verificarAdministrador(id) {
-  const res = await fetch(`${url}/users/${id}/es-administrador`);
+  const res = await fetch(`${url1}/users/${id}/es-administrador`);
 
   const json = await res.json();
 
