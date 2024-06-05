@@ -1,6 +1,5 @@
 import { where } from "sequelize";
 import Prestamo from "../models/prestamo.js";
-import Sala from "../models/sala.js";
 import Usuario from "../models/usuario.js";
 
 // Crear solicitud de préstamo
