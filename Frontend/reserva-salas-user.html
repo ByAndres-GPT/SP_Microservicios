@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Reserva de salas</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">Usuario</div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="informacion-user.html">
+                    <i class="bx bx-user"></i>
+                    <span class="links_name">Información Personal</span>
+                </a>
+                <span class="tooltip">Información Personal</span>
+            </li>
+            <li>
+                <a href="reserva-salas-user.html">
+                    <i class='bx bx-customize'></i>
+                    <span class="links_name">Reserva de Salas</span>
+                </a>
+                <span class="tooltip">Reserva de Salas</span>
+            </li>
+            <li>
+                <a href="estado-reservacion-user.html">
+                    <i class='bx bx-copy-alt'></i>
+                    <span class="links_name">Historial de reservas</span>
+                </a>
+                <span class="tooltip">Historial de reservas</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+
+                    <div class="name_job">
+                        <div id="m-barra" class="name">Nombre y Apellido</div>
+                    </div>
+                </div>
+                <i style="cursor: pointer;" onclick="cerrarSesion()" class="bx bx-log-out" id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="slide-container">
+
+            <h1>Reservación de salas</h1>
+            <div id="root"></div>
+
+        </div>
+
+
+    </section>
+
+    <div id="openModal" class="modalDialog">
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <form id="formReservarFecha">
+                <h2 class="centrar" id="idSala">SALA</h2>
+                <div class="formAlinear">
+                    <div>
+                        <label for="fechaInicio">Seleccione una fecha</label>
+                    </div>
+                    <div>
+                        <input type="date" id="fecha">
+                    </div>
+                </div>
+                <div class="alinear">
+                    <div class="alinear">
+                        <a onclick="reservarFecha()" href="#openModal2" class="botonModal" type="button">Seleccionar
+                            horas</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="openModal2" class="modalDialog">
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <form id="formReservar">
+                <h2 class="centrar" id="idSala2">SALA</h2>
+
+                <div class="formAlinear">
+                    <div>
+                        <label for="fechaInicio">Seleccione una hora de inicio</label>
+                    </div>
+                    <div>
+                        <select class="select" name="" id="hora">
+                            <option selected>Seleccione</option>
+                            <option value="06:00">6:00am</option>
+                            <option value="07:00">7:00am</option>
+                            <option value="08:00">8:00am</option>
+                            <option value="09:00">9:00am</option>
+                            <option value="10:00">10:00am</option>
+                            <option value="11:00">11:00am</option>                            
+                            <option value="12:00">12:00pm</option>
+                            <option value="13:00">1:00pm</option>
+                            <option value="14:00">2:00pm</option>
+                            <option value="15:00">3:00pm</option>
+                            <option value="16:00">4:00pm</option>
+                            <option value="17:00">5:00pm</option>
+                            <option value="18:00">6:00pm</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="formAlinear">
+                    <div>
+                        <label for="fechaInicio">Seleccione cuantas horas</label>
+                    </div>
+                    <div>
+                        <select class="select" name="" id="cantidadHoras">
+                            <option selected>Seleccione</option>
+                            <option value="1">Una hora</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="formAlinear">
+                    <p style="color: red;" id="horasOcupadas">Ninguna hora ocupada</p>
+                    <p id="alert"></p>
+                    <div>
+                        <button class="botonModal" type="submit">Reservar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="js/config.js"></script>
+<script src="js/salasUsuario.js"></script>
+<script src="js/script.js"></script>
+<script src="js/verificarLogin.js"></script>
+<script src="js/datosBarra.js"></script>
+<script src="js/expirarSesion.js"></script>
+
+
+</html>

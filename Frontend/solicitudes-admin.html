@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Solicitudes</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/informacion-admin.css" />
+  <link rel="stylesheet" href="css/table.css">
+  <link rel="stylesheet" href="css/usuarios_admin.css">
+  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Boxicons CDN Link -->
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <div class="logo_name">Administrador</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="informacion-admin.html">
+          <i class="bx bx-user"></i>
+          <span class="links_name">Información Personal</span>
+        </a>
+        <span class="tooltip">Información Personal</span>
+      </li>
+      <li>
+        <a href="gestion-salas-admin.html">
+          <i class='bx bx-customize'></i>
+          <span class="links_name">Gestión de Salas</span>
+        </a>
+        <span class="tooltip">Gestión de Salas</span>
+      </li>
+      <li>
+        <a href="historial-admin.html">
+          <i class='bx bx-copy-alt'></i>
+          <span class="links_name">Historial</span>
+        </a>
+        <span class="tooltip">Historial de entradas y salidas</span>
+      </li>
+      <li>
+        <a href="gestion-usuarios-admin.html">
+          <i class='bx bx-face'></i>
+          <span class="links_name">Usuarios</span>
+        </a>
+        <span class="tooltip">Usuarios</span>
+      </li>
+      <li>
+        <a href="solicitudes-admin.html">
+          <i class='bx bx-food-menu'></i>
+          <span class="links_name">Solicitudes</span>
+        </a>
+        <span class="tooltip">Solicitudes</span>
+      </li>
+      <li class="profile">
+        <div class="profile-details">
+
+          <div class="name_job">
+            <div id="m-barra" class="name">Nombre y Apellido</div>
+          </div>
+        </div>
+        <i style="cursor: pointer;" onclick="cerrarSesion()" class="bx bx-log-out" id="log_out"></i>
+      </li>
+    </ul>
+  </div>
+
+
+  <!--Diego-->
+  <section class="home-section">
+    <main>
+
+      <div class="contenido-global">
+        <div class="contenido">
+          <h1 class="titulo">Solicitudes</h1>
+          <div class="container">
+            <h2>Filtrar por:</h2>
+            <ul class="custom-list">
+              <li><span class="vineta-info">ID Usuario:</span> <input placeholder="Ingrese el ID de un Usuario"
+                  type="text" id="idUsuario"></li>
+              <li><span class="vineta-info">ID Sala:</span> <input placeholder="Ingrese el ID de una Sala" type="text"
+                  id="idSala"></li>
+            </ul>
+          </div>
+          <button onclick="filtro()" type="button" class="buscar-btn">Buscar</button>
+        </div>
+
+
+
+        <div class="wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>ID Sala</th>
+                <th>ID Usuario</th>
+                <th>Nombre</th>
+                <th>Estado</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Cantidad de horas</th>
+                <th>acciones</th>
+              </tr>
+            </thead>
+            <tbody id="root">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </section>
+
+  <script src="js/config.js"></script>
+  <script src="js/solicitudes.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/datosBarra.js"></script>
+  <script src="js/expirarSesion.js"></script>
+  <script src="js/verificarLogin.js"></script>
+</body>
+
+</html>

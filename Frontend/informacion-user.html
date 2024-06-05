@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Información Personal</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/informacion-admin.css" />
+  <!-- Boxicons CDN Link -->
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <div class="logo_name">Usuario</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="informacion-user.html">
+          <i class="bx bx-user"></i>
+          <span class="links_name">Información Personal</span>
+        </a>
+        <span class="tooltip">Información Personal</span>
+      </li>
+      <li>
+        <a href="reserva-salas-user.html">
+          <i class='bx bx-customize'></i>
+          <span class="links_name">Reserva de Salas</span>
+        </a>
+        <span class="tooltip">Reserva de Salas</span>
+      </li>
+      <li>
+        <a href="estado-reservacion-user.html">
+          <i class='bx bx-copy-alt'></i>
+          <span class="links_name">Historial de reservas</span>
+        </a>
+        <span class="tooltip">Historial de reservas</span>
+      </li>
+      <li class="profile">
+        <div class="profile-details">
+
+          <div class="name_job">
+            <div id="m-barra" class="name">Nombre y Apellido</div>
+          </div>
+        </div>
+        <i style="cursor: pointer;" onclick="cerrarSesion()" class="bx bx-log-out" id="log_out"></i>
+      </li>
+    </ul>
+  </div>
+
+  <section class="home-section">
+    <div class="slide-container">
+      <div id="tittle-info">
+        <h1>Información Personal</h1>
+      </div>
+      <div id="informacion">
+        <div id="foto-perfil">
+          <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+            alt="foto-perfil" width="300px">
+          <button class="btn-info">Subir imagen</button>
+        </div>
+        <div id="informacion-personal">
+          <table>
+            <tbody>
+              <tr>
+                <th>Id</th>
+                <td id="m-id"></td>
+              </tr>
+              <tr>
+                <th>Nombre</th>
+                <td id="m-nombre"></td>
+              </tr>
+              <tr>
+                <th>Apellido</th>
+                <td id="m-apellido"></td>
+              </tr>
+              <tr>
+                <th>Correo</th>
+                <td id="m-correo"></td>
+              </tr>
+              <tr>
+                <th>Rol</th>
+                <td id="m-rol">Usuario</td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="btn-info"><a href="#modalEditar" onclick="cargarDatosUsuario()">Editar</a></button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div id="modalEditar" class="modalDialog">
+    <div>
+      <a href="#close" title="Close" class="close">X</a>
+      <h2 class="centrar">Editar Información</h2>
+
+      <form id="form-editar-admin">
+
+        <div class="formAlinear">
+          <div>
+            <label>Nombre</label>
+          </div>
+          <div>
+            <input id="nombre" class="select" type="text" placeholder="Nombre">
+          </div>
+        </div>
+        <div class="formAlinear">
+          <div>
+            <label>Apellido</label>
+          </div>
+          <div>
+            <input id="apellido" class="select" type="text" placeholder="Apellido">
+          </div>
+        </div>
+        <div class="formAlinear">
+          <div>
+            <label>Correo</label>
+          </div>
+          <div>
+            <input id="correo" class="select" type="text" placeholder="Correo">
+          </div>
+        </div>
+        <div class="alinear">
+          <button type="submit" class="botonModal">Guardar</button>
+        </div>
+      </form>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/verificarLogin.js"></script>
+    <script src="js/informacionUsuario.js"></script>
+    <script src="js/expirarSesion.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Estado de la reservación</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/table.css">
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">Usuario</div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="informacion-user.html">
+                    <i class="bx bx-user"></i>
+                    <span class="links_name">Información Personal</span>
+                </a>
+                <span class="tooltip">Información Personal</span>
+            </li>
+            <li>
+                <a href="reserva-salas-user.html">
+                    <i class='bx bx-customize'></i>
+                    <span class="links_name">Reserva de Salas</span>
+                </a>
+                <span class="tooltip">Reserva de Salas</span>
+            </li>
+            <li>
+                <a href="estado-reservacion-user.html">
+                    <i class='bx bx-copy-alt'></i>
+                    <span class="links_name">Historial de reservas</span>
+                </a>
+                <span class="tooltip">Historial de reservas</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+
+                    <div class="name_job">
+                        <div id="m-barra" class="name">Nombre y Apellido</div>
+                    </div>
+                </div>
+                <i style="cursor: pointer;" onclick="cerrarSesion()" class="bx bx-log-out" id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <main>
+
+            <div class="contenido-global">
+                <div class="contenido">
+                    <h1 class="titulo">Reservaciones</h1>
+                </div>
+                <div class="wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID Sala</th>
+                                <th>Fecha</th>
+                                <th>Cantidad de horas</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="root">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </section>
+
+</body>
+
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+<script src="js/verificarLogin.js"></script>
+<script src="js/datosBarra.js"></script>
+<script src="js/expirarSesion.js"></script>
+<script src="js/ver-reservaciones.js"></script>
+
+</html>

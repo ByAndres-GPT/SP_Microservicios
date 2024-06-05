@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Registro E/S</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sala.css">
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">Sala</div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="registro-entradas-salidas-salas.html">
+                    <i class="bx bx-user"></i>
+                    <span class="links_name">E/S</span>
+                </a>
+                <span class="tooltip">Entradas/Salidas</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+
+                    <div class="name_job">
+                        <div id="m-barra" class="name">Sala401</div>
+                    </div>
+                </div>
+                <i style="cursor: pointer;" onclick="cerrar()" class="bx bx-log-out" id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="container">
+            <div class="centrar">
+                <div class="tittle">
+                    <h1>Registrar Entradas y Salidas</h1>
+                </div>
+                <div class="form-centrar">
+                    <form id="form-sala">
+                        <div class="formulario">
+                            <label for="Id">Id Usuario</label>
+                            <input type="number" placeholder="Id Usuario" id="id-user-es" required>
+                            <label for="accion">Vas a?</label>
+                            <select name="accion" id="select">
+                                <option value="entrar">Entrar</option>
+                                <option value="salir">Salir</option>
+                            </select>
+                            <button type="submit">Aceptar</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </section>
+</body>
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+<script src="js/loginSala.js"></script>
+<script src="js/datosBarraSala.js"></script>\
+<script src="js/entradaSalidaUser.js"></script>
+
+</html>

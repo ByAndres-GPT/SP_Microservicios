@@ -1,0 +1,45 @@
+.custom-list {
+    list-style-type: none; /* Elimina la viñeta predeterminada */
+    padding-left: 20px; /* Ajusta el espacio a la izquierda para dejar espacio para la viñeta */
+}
+
+.custom-list li {
+    position: relative; /* Permite posicionar la viñeta personalizada */
+    padding-left: 10px; /* Ajusta el espacio a la izquierda para la viñeta */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+.custom-list li::before {
+    content: '◦'; /* Utiliza el asterisco como viñeta personalizada */
+    position: absolute; /* Posiciona la viñeta absolutamente */
+    top: 0; /* Ajusta la posición verticalmente */
+    left: 0; /* Ajusta la posición horizontalmente */
+    width: 20px; /* Ancho de la viñeta */
+    height: 20px; /* Altura de la viñeta */
+    font-size: 20px; /* Tamaño de la viñeta */
+    line-height: 20px; /* Alineación vertical de la viñeta */
+    color: #000; /* Color de la viñeta */
+}
+
+.vineta-info {
+    margin-right: 10px; /* Agrega espacio entre la viñeta y la información adicional */
+    font-weight: bold; /* Aplica negrita a la información adicional */
+}
+
+.buscar-btn {
+    background-color: #11101D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buscar-btn:hover {
+    background-color: #2c2949;
+}
+
+
+.botoncitos {
+    padding: 0 10px;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestion de salas</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/card.css" />
+  <!-- Boxicons CDN Link -->
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <div class="logo_name">Administrador</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="informacion-admin.html">
+          <i class="bx bx-user"></i>
+          <span class="links_name">Información Personal</span>
+        </a>
+        <span class="tooltip">Información Personal</span>
+      </li>
+      <li>
+        <a href="gestion-salas-admin.html">
+          <i class='bx bx-customize'></i>
+          <span class="links_name">Gestión de Salas</span>
+        </a>
+        <span class="tooltip">Gestión de Salas</span>
+      </li>
+      <li>
+        <a href="historial-admin.html">
+          <i class='bx bx-copy-alt'></i>
+          <span class="links_name">Historial</span>
+        </a>
+        <span class="tooltip">Historial de entradas y salidas</span>
+      </li>
+      <li>
+        <a href="gestion-usuarios-admin.html">
+          <i class='bx bx-face'></i>
+          <span class="links_name">Usuarios</span>
+        </a>
+        <span class="tooltip">Usuarios</span>
+      </li>
+      <li>
+        <a href="solicitudes-admin.html">
+          <i class='bx bx-food-menu'></i>
+          <span class="links_name">Solicitudes</span>
+        </a>
+        <span class="tooltip">Solicitudes</span>
+      </li>
+      <li class="profile">
+        <div class="profile-details">
+
+          <div class="name_job">
+            <div id="m-barra" class="name">Nombre y Apellido</div>
+          </div>
+        </div>
+        <i style="cursor: pointer;" onclick="cerrarSesion()" class="bx bx-log-out" id="log_out"></i>
+      </li>
+    </ul>
+  </div>
+
+  <section class="home-section">
+    <div class="slide-container">
+
+      <h1>Gestión de salas</h1>
+      <div id="root">
+
+      </div>
+
+      <div class="boton-crear">
+        <a class="boton" href="#modalCrear">Crear sala</a>
+      </div>
+
+  </section>
+
+  <div id="modalCrear" class="modalDialog">
+    <div>
+      <a href="#close" title="Close" class="close">X</a>
+      <h2 class="centrar">Crear sala</h2>
+
+      <form id="formCrear">
+        <div class="formAlinear">
+          <div>
+            <label>Nombre de la sala</label>
+          </div>
+          <div>
+            <input id="nombre" class="select" type="text" placeholder="Nombre">
+          </div>
+        </div>
+
+        <div class="formAlinear">
+          <div>
+            <label>Descripción de la sala</label>
+          </div>
+          <div>
+            <input id="descripcion" class="select" type="text" placeholder="Descripción">
+          </div>
+        </div>
+        <div class="alinear">
+          <button class="botonModal">Crear sala</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="modalEditar" class="modalDialog">
+    <div>
+      <a href="#close" title="Close" class="close">X</a>
+      <h2 class="centrar">Editar sala</h2>
+
+      <form id="formEditar">
+
+        <div class="formAlinear">
+          <div>
+            <label>Nombre de la sala</label>
+          </div>
+          <div>
+            <input id="edit-nombre" class="select" type="text" placeholder="Nombre">
+          </div>
+        </div>
+
+        <div class="formAlinear">
+          <div>
+            <label>Descripción de la sala</label>
+          </div>
+          <div>
+            <input id="edit-desc" class="select" type="text" placeholder="Descripción">
+          </div>
+        </div>
+
+        <div class="formAlinear">
+          <div>
+            <label>Estado de la sala</label>
+          </div>
+          <div>
+            <select class="select" id="edit-estado">
+              <option selected>Seleccione un estado</option>
+              <option value="Ocupado">Ocupado</option>
+              <option value="Vacio">Vacio</option>
+            </select>
+          </div>
+        </div>
+        <div class="alinear">
+          <button type="submit" class="botonModal">Editar sala</button>
+        </div>
+      </form>
+    </div>
+
+</body>
+
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+<script src="js/gestionSalas.js"></script>
+<script src="js/datosBarra.js"></script>
+<script src="js/verificarLogin.js"></script>
+<script src="js/expirarSesion.js"></script>
+
+</html>
