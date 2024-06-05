@@ -2,7 +2,7 @@ async function mostrarInformacion() {
   const id = sessionStorage.getItem("ID_USER");
   //console.log(id);
   try {
-    const response = await fetch(`${url}/users/user/${id}`);
+    const response = await fetch(`${url1}/users/user/${id}`);
     if (!response.ok) {
       throw new Error("No se pudo obtener el usuario");
     }
@@ -34,7 +34,7 @@ const inputEmail = document.querySelector("#correo");
 const id = sessionStorage.getItem("ID_USER");
 async function cargarDatosUsuario() {
   try {
-    const response = await fetch(`${url}/users/user/${id}`);
+    const response = await fetch(`${url1}/users/user/${id}`);
     if (!response.ok) {
       throw new Error("No se pudieron obtener los datos del usuario");
     }
@@ -84,7 +84,7 @@ async function editar(ID_USUARIO, NOMBRE, APELLIDO, CORREO) {
   try {
     const body = { NOMBRE, APELLIDO, CORREO };
 
-    const res = await fetch(`${url}/users/actualizar/${ID_USUARIO}`, {
+    const res = await fetch(`${url1}/users/actualizar/${ID_USUARIO}`, {
       headers: {
         "Content-Type": "application/json",
       },

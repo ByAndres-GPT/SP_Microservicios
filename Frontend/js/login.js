@@ -25,7 +25,7 @@ async function login(CORREO, CONTRASENIA) {
   const body = { CORREO, CONTRASENIA };
 
   try {
-    const res = await fetch(`${url}/users/login`, {
+    const res = await fetch(`${url1}/users/login`, {
       headers: {
         "Content-Type": "application/json",
       },

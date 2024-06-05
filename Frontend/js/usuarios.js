@@ -9,7 +9,7 @@ async function filtro() {
   try {
     document.querySelector("#root").innerHTML = "";
 
-    const response = await fetch(`${url}/users/filtro`, {
+    const response = await fetch(`${url1}/users/filtro`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -50,7 +50,7 @@ async function filtro() {
 
 async function mostrarUsuarios() {
   try {
-    const response = await fetch(`${url}/users/allUsers`);
+    const response = await fetch(`${url1}/users/allUsers`);
     if (!response.ok) {
       throw new Error("No se pudieron obtener los registros");
     }
@@ -91,7 +91,7 @@ const inputEmail = document.querySelector("#correo");
 async function cargarDatosUsuario(id) {
   idEdit = id;
   try {
-    const response = await fetch(`${url}/users/user/${id}`);
+    const response = await fetch(`${url1}/users/user/${id}`);
     if (!response.ok) {
       throw new Error("No se pudieron obtener los datos del usuario");
     }
@@ -141,7 +141,7 @@ async function editar(ID_USUARIO, NOMBRE, APELLIDO, CORREO) {
   try {
     const body = { NOMBRE, APELLIDO, CORREO };
 
-    const res = await fetch(`${url}/users/actualizar/${ID_USUARIO}`, {
+    const res = await fetch(`${url1}/users/actualizar/${ID_USUARIO}`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -184,7 +184,7 @@ async function validarEliminar(boton) {
 
 async function eliminar(id) {
   try {
-    const res = await fetch(`${url}/users/eliminar/${id}`, {
+    const res = await fetch(`${url1}/users/eliminar/${id}`, {
       method: "DELETE",
     });
 

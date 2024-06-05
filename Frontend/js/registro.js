@@ -35,7 +35,7 @@ async function validarFormulario(evt) {
 
 async function registrar(NOMBRE, APELLIDO, CORREO, CONTRASENIA) {
   const body = { NOMBRE, APELLIDO, CORREO, CONTRASENIA };
-  const res = await fetch(`${url}/users/registrar`, {
+  const res = await fetch(`${url1}/users/registrar`, {
     headers: {
       "Content-Type": "application/json",
     },

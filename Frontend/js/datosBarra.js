@@ -1,7 +1,7 @@
 async function mostrarInformacion() {
   const id = sessionStorage.getItem("ID_USER");
   try {
-    const response = await fetch(`${url}/users/user/${id}`);
+    const response = await fetch(`${url1}/users/user/${id}`);
     if (!response.ok) {
       throw new Error("No se pudo obtener el usuario");
     }
