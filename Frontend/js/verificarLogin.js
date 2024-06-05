@@ -1,6 +1,7 @@
 const currentPath = location.pathname;
+console.log(currentPath);
 const rutasAdmin = [
-  "/informacion-admin.html",
+  "/SP_Microservicios/Frontend/informacion-admin.html",
   "/gestion-salas-admin.html",
   "/solicitudes-admin.html",
   "/historial-admin.html",
@@ -8,7 +9,7 @@ const rutasAdmin = [
   "/detalles-sala-admin.html",
 ];
 const rutasUser = [
-  "/informacion-user.html",
+  "/SP_Microservicios/Frontend/informacion-user.html",
   "/estado-reservacion-user.html",
   "/reserva-salas-user.html",
 ];
@@ -27,10 +28,10 @@ async function verificarLogin() {
   const esAdmin = await verificarAdministrador(Number(id));
 
   if (esAdmin.esAdmin && !rutasAdmin.includes(currentPath)) {
-    location.replace("/informacion-admin.html");
+    location.replace("/SP_Microservicios/Frontend/informacion-admin.html");
   }
   if (!esAdmin.esAdmin && !rutasUser.includes(currentPath)) {
-    location.replace("/informacion-user.html");
+    location.replace("/SP_Microservicios/Frontend/informacion-user.html");
   }
 }
 verificarLogin();

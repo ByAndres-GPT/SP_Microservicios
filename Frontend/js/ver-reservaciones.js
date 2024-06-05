@@ -2,7 +2,7 @@ async function mostrarInformacion() {
 
     const id = sessionStorage.getItem("ID_USER");  
     try {
-      const response = await fetch(`${url}/prestamos/usuario/${id}`);
+      const response = await fetch(`${url2}/prestamos/usuario/${id}`);
       if (!response.ok) {
         throw new Error("No se pudo obtene la sala");
       }

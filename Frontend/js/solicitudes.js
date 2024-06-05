@@ -8,7 +8,7 @@ async function filtro() {
   try {
     document.querySelector("#root").innerHTML = "";
 
-    const response = await fetch(`${url}/prestamos/filtro`, {
+    const response = await fetch(`${url2}/prestamos/filtro`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -57,7 +57,7 @@ async function filtro() {
 }
 async function mostrarSolicitudes() {
   try {
-    const response = await fetch(`${url}/prestamos/`);
+    const response = await fetch(`${url2}/prestamos/`);
     if (!response.ok) {
       throw new Error("No se pudieron obtener los registros");
     }
@@ -118,7 +118,7 @@ async function action(ID_USUARIO, ID_SOLICITUD, accion) {
   try {
     const body = { ID_USUARIO };
 
-    const res = await fetch(`${url}/prestamos/${accion}/${ID_SOLICITUD}`, {
+    const res = await fetch(`${url2}/prestamos/${accion}/${ID_SOLICITUD}`, {
       headers: {
         "Content-Type": "application/json",
       },

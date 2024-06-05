@@ -125,7 +125,7 @@ async function solicitar() {
     const ID_SALA = idEdit;
     const body = { FECHA, HORA, CANTIDAD_HORAS, ID_USUARIO, NOMBRE, ID_SALA };
 
-    const res = await fetch(`${url}/prestamos/solicitar`, {
+    const res = await fetch(`${url2}/prestamos/solicitar`, {
       headers: {
         "Content-Type": "application/json",
       },
