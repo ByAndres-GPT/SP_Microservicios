@@ -74,7 +74,7 @@ async function validarFormulario(evt) {
 
   if (!usuarioNuevo.error) {
     console.log("Usuario editado correctamente");
-    location.replace("informacion-admin");
+    location.replace("informacion-admin.html");
   } else {
     console.log("Error al editar el usuario:", usuarioNuevo.error);
   }
