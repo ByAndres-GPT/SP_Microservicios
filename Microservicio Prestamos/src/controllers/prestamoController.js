@@ -1,4 +1,3 @@
-import { where } from "sequelize";
 import Prestamo from "../models/prestamo.js";
 import Usuario from "../models/usuario.js";
 
