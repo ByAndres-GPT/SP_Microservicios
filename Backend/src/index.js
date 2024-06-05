@@ -3,9 +3,6 @@ import morgan from "morgan";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import db from "./database/db.js";
-import usuarioRouter from "./routes/usuarioRouter.js";
-import salaRouter from "./routes/salaRouter.js";
-import prestamoRouter from "./routes/prestamoRouter.js";
 import entradasYsalidasRouter from "./routes/entradasSalidasRouter.js";
 import cors from "cors";
 
@@ -31,9 +28,6 @@ app.use(bodyParser.json());
 app.use(express.urlencoded());
 
 //rutas
-app.use("/users", usuarioRouter);
-app.use("/salas", salaRouter);
-app.use("/prestamos", prestamoRouter);
 app.use("/entradasYsalidas", entradasYsalidasRouter);
 
 //puerto

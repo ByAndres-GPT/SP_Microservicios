@@ -11,7 +11,7 @@ async function filtro() {
   try {
     document.querySelector("#root").innerHTML = "";
 
-    const response = await fetch(`${url}/entradasYsalidas/filtro`, {
+    const response = await fetch(`${url4}/entradasYsalidas/filtro`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -48,7 +48,7 @@ async function filtro() {
 
 async function cargarDatosEntradasSalidas() {
   try {
-    const response = await fetch(`${url}/entradasYsalidas/all`);
+    const response = await fetch(`${url4}/entradasYsalidas/all`);
     if (!response.ok) {
       throw new Error("No se pudieron obtener los registros");
     }

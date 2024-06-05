@@ -17,7 +17,7 @@ async function mostrarInformacion() {
   }
 
   try {
-    const response = await fetch(`${url}/entradasYsalidas/enSala/${id}`);
+    const response = await fetch(`${url4}/entradasYsalidas/enSala/${id}`);
     if (!response.ok) {
       throw new Error("No se pudo obtene la sala");
     }

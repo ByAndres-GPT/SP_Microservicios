@@ -33,7 +33,7 @@ async function registrar(ID_USUARIO, ID_SALA, accion) {
   try {
     const body = { ID_USUARIO, ID_SALA };
 
-    const res = await fetch(`${url}/entradasYsalidas/${accion}`, {
+    const res = await fetch(`${url4}/entradasYsalidas/${accion}`, {
       headers: {
         "Content-Type": "application/json",
       },

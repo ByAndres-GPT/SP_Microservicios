@@ -2,16 +2,16 @@ const currentPath = location.pathname;
 console.log(currentPath);
 const rutasAdmin = [
   "/SP_Microservicios/Frontend/informacion-admin.html",
-  "/gestion-salas-admin.html",
-  "/solicitudes-admin.html",
-  "/historial-admin.html",
-  "/gestion-usuarios-admin.html",
-  "/detalles-sala-admin.html",
+  "/SP_Microservicios/Frontend/gestion-salas-admin.html",
+  "/SP_Microservicios/Frontend/solicitudes-admin.html",
+  "/SP_Microservicios/Frontend/historial-admin.html",
+  "/SP_Microservicios/Frontend/gestion-usuarios-admin.html",
+  "/SP_Microservicios/Frontend/detalles-sala-admin.html",
 ];
 const rutasUser = [
   "/SP_Microservicios/Frontend/informacion-user.html",
-  "/estado-reservacion-user.html",
-  "/reserva-salas-user.html",
+  "/SP_Microservicios/Frontend/estado-reservacion-user.html",
+  "/SP_Microservicios/Frontend/reserva-salas-user.html",
 ];
 console.log(currentPath);
 async function verificarLogin() {
@@ -47,5 +47,5 @@ async function verificarAdministrador(id) {
 function cerrarSesion() {
   localStorage.clear();
   sessionStorage.clear();
-  location.replace("/index.html");
+  location.replace("/SP_Microservicios/Frontend/index.html");
 }

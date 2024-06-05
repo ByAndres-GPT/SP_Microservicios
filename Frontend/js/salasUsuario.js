@@ -60,7 +60,7 @@ async function reservarFecha() {
     const ID_SALA = idEdit;
 
     const body = { FECHA, ID_SALA };
-    const res = await fetch(`${url}/prestamos/dias`, {
+    const res = await fetch(`${url2}/prestamos/dias`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -107,7 +107,7 @@ async function validarFormulario(evt) {
 
   if (!prestamoNuevo.error) {
     console.log("Prestamo solicitado correctamente");
-    location.replace("reserva-salas-user");
+    location.replace("reserva-salas-user.html");
   } else {
     console.log("Error al solicitar el prestamo:", prestamoNuevo.error);
   }
