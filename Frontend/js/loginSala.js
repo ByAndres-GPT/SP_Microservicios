@@ -25,7 +25,7 @@ async function validarFormulario(evt) {
 
 async function buscarSala(ID_SALA) {
   try {
-    const res = await fetch(`${url}/salas/sala/${ID_SALA}`);
+    const res = await fetch(`${url3}/salas/sala/${ID_SALA}`);
     const json = await res.json();
 
     return json;

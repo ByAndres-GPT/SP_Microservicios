@@ -3,7 +3,7 @@ async function mostrarInformacion() {
   var id = urll.get("id-sala");
 
   try {
-    const response = await fetch(`${url}/salas/sala/${id}`);
+    const response = await fetch(`${url3}/salas/sala/${id}`);
     if (!response.ok) {
       throw new Error("No se pudo obtene la sala");
     }

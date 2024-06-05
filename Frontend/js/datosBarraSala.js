@@ -1,7 +1,7 @@
 async function mostrarInformacion() {
     const id = localStorage.getItem("SALA_ID");
     try {
-      const response = await fetch(`${url}/salas/sala/${id}`);
+      const response = await fetch(`${url3}/salas/sala/${id}`);
       if (!response.ok) {
         throw new Error("No se pudo obtener la sala");
       }
